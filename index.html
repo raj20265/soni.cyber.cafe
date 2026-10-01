@@ -2,78 +2,464 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SONI CYBER CAFE | ONLINE SERVICE</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
-header{background:linear-gradient(135deg,#062b72,#087cf0);color:white;padding:25px 15px;text-align:center}
-header h1{margin:0;font-size:32px}header p{margin:5px;font-weight:bold;letter-spacing:2px}
-.hero{padding:45px 18px;text-align:center;background:white}
-.hero h2{font-size:34px;color:#092a68;margin:5px}.hero span{color:#087cf0}
-.hero p{font-size:17px;color:#596579;max-width:700px;margin:15px auto}
-.btn{display:inline-block;padding:13px 22px;margin:6px;border-radius:9px;color:white;text-decoration:none;font-weight:bold;background:#087cf0}
-.whatsapp{background:#16a05d}
-section{max-width:1100px;margin:auto;padding:35px 15px}
-h2.title{text-align:center;color:#092a68}
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.card{background:white;padding:22px 10px;text-align:center;border-radius:15px;box-shadow:0 4px 18px #00000012}
-.card .icon{font-size:35px}.card h3{margin:8px 0;color:#12346d}.card p{font-size:13px;color:#667085}
-.contact{background:#092a68;color:white;text-align:center;border-radius:18px;padding:30px}
-footer{background:#071b40;color:white;text-align:center;padding:22px;margin-top:25px}
-@media(max-width:700px){.services{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:400px){.services{grid-template-columns:1fr}header h1{font-size:25px}.hero h2{font-size:27px}}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#172033;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#062b72,#087cf0);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:34px;
+    letter-spacing:2px;
+}
+
+header p{
+    font-size:18px;
+    margin-top:5px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    background:white;
+    padding:40px 18px;
+}
+
+.hero h2{
+    color:#092a68;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.hero span{
+    color:#087cf0;
+}
+
+.hero p{
+    font-size:17px;
+    color:#596579;
+    max-width:800px;
+    margin:15px auto;
+}
+
+.buttons{
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    margin:6px;
+    border-radius:9px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    background:#087cf0;
+}
+
+.whatsapp{
+    background:#16a05d;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:35px 15px;
+}
+
+.title{
+    text-align:center;
+    color:#092a68;
+    margin-bottom:25px;
+    font-size:27px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    padding:22px 12px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 18px #00000012;
+    border:1px solid #e5eaf2;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 25px #00000020;
+}
+
+.icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.card h3{
+    color:#12346d;
+    font-size:15px;
+}
+
+.card p{
+    color:#667085;
+    font-size:13px;
+    margin-top:4px;
+}
+
+.contact{
+    background:#092a68;
+    color:white;
+    text-align:center;
+    border-radius:18px;
+    padding:35px 20px;
+}
+
+.contact h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.phone{
+    font-size:25px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+footer{
+    background:#071b40;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:30px;
+}
+
+@media(max-width:900px){
+    .services{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:27px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .card{
+        padding:18px 8px;
+    }
+}
+
+@media(max-width:400px){
+    .services{
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>SONI CYBER CAFE</h1>
-<p>ONLINE SERVICE</p>
+    <h1>SONI CYBER CAFE</h1>
+    <p>ONLINE SERVICE</p>
 </header>
 
 <div class="hero">
-<h2>आपकी सभी <span>Online Services</span> एक ही जगह</h2>
-<p>आधार, पैन कार्ड, वोटर ID, ऑनलाइन फॉर्म, RC/DL, प्रिंट, स्कैन और अन्य ऑनलाइन सेवाओं के लिए संपर्क करें।</p>
-<a class="btn whatsapp" href="https://wa.me/917070656113">💬 WhatsApp करें</a>
-<a class="btn" href="#services">📋 Services देखें</a>
+
+    <h2>आपकी सभी <span>Online Services</span> एक ही जगह</h2>
+
+    <p>
+        PAN Card, Aadhaar, Voter ID, Ration Card, Driving Licence,
+        Vehicle, Farmer Card, E-Shram एवं अन्य ऑनलाइन सेवाएँ।
+    </p>
+
+    <div class="buttons">
+        <a class="btn whatsapp"
+           href="https://wa.me/917070656113"
+           target="_blank">
+           💬 WhatsApp पर संपर्क करें
+        </a>
+
+        <a class="btn" href="#services">
+           📋 सभी Services देखें
+        </a>
+    </div>
+
 </div>
+
 
 <section id="services">
-<h2 class="title">हमारी प्रमुख सेवाएँ</h2>
+
+<h2 class="title">📋 हमारी Online Services</h2>
+
 <div class="services">
 
-<div class="card"><div class="icon">🪪</div><h3>आधार सेवा</h3><p>आधार से संबंधित ऑनलाइन सहायता</p></div>
+<div class="card">
+<div class="icon">📝</div>
+<h3>LL Exam Pass</h3>
+<p>Learning Licence Exam Service</p>
+</div>
 
-<div class="card"><div class="icon">💳</div><h3>पैन कार्ड</h3><p>पैन कार्ड ऑनलाइन आवेदन</p></div>
+<div class="card">
+<div class="icon">🪪</div>
+<h3>PAN To Aadhaar No</h3>
+<p>PAN से Aadhaar जानकारी</p>
+</div>
 
-<div class="card"><div class="icon">🗳️</div><h3>वोटर ID</h3><p>वोटर ID ऑनलाइन सेवा</p></div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>E-Shram Mobile Update</h3>
+<p>E-Shram Mobile Update Service</p>
+</div>
 
-<div class="card"><div class="icon">🚗</div><h3>RC / DL</h3><p>वाहन एवं लाइसेंस सेवा</p></div>
+<div class="card">
+<div class="icon">📄</div>
+<h3>E-Shram Card Download</h3>
+<p>जहाँ वैध रूप से उपलब्ध हो</p>
+</div>
 
-<div class="card"><div class="icon">📝</div><h3>Online Form</h3><p>सरकारी, कॉलेज एवं जॉब फॉर्म</p></div>
+<div class="card">
+<div class="icon">🔢</div>
+<h3>Aadhaar No To PAN No</h3>
+<p>Aadhaar से PAN जानकारी</p>
+</div>
 
-<div class="card"><div class="icon">🎫</div><h3>Ticket Service</h3><p>टिकट संबंधी सेवा</p></div>
+<div class="card">
+<div class="icon">🍚</div>
+<h3>All State Ration To Aadhaar No</h3>
+<p>Ration Card संबंधित सेवा</p>
+</div>
 
-<div class="card"><div class="icon">💰</div><h3>AEPS / Cash</h3><p>उपलब्ध बैंकिंग सेवाएँ</p></div>
+<div class="card">
+<div class="icon">💳</div>
+<h3>PAN No Details</h3>
+<p>PAN संबंधित जानकारी</p>
+</div>
 
-<div class="card"><div class="icon">🖨️</div><h3>Print / Scan</h3><p>Print, Scan, Photo & Copy</p></div>
+<div class="card">
+<div class="icon">📥</div>
+<h3>PAN Card PDF Download</h3>
+<p>PAN PDF Service</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Mobile No To Full Details</h3>
+<p>उपलब्ध वैध सेवाओं के अनुसार</p>
+</div>
+
+<div class="card">
+<div class="icon">🗳️</div>
+<h3>Voter To Mobile Link</h3>
+<p>Voter ID Mobile Link</p>
+</div>
+
+<div class="card">
+<div class="icon">📞</div>
+<h3>Mobile No To AC Details</h3>
+<p>उपलब्ध जानकारी के अनुसार</p>
+</div>
+
+<div class="card">
+<div class="icon">🚗</div>
+<h3>Vehicle To Mobile No</h3>
+<p>Vehicle संबंधित सेवा</p>
+</div>
+
+<div class="card">
+<div class="icon">🔍</div>
+<h3>Chassis To Vehicle</h3>
+<p>Vehicle जानकारी सेवा</p>
+</div>
+
+<div class="card">
+<div class="icon">🍚</div>
+<h3>UP Ration To Aadhaar No</h3>
+<p>Ration Card Service</p>
+</div>
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>RC PDF Download</h3>
+<p>Registration Certificate PDF</p>
+</div>
+
+<div class="card">
+<div class="icon">🚘</div>
+<h3>Driving Licence PDF Download</h3>
+<p>DL PDF Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🪪</div>
+<h3>Aadhaar Card PDF Download</h3>
+<p>Aadhaar PDF Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🍚</div>
+<h3>Aadhaar To Ration PDF</h3>
+<p>Ration Card संबंधित सेवा</p>
+</div>
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>Ration PDF</h3>
+<p>Ration Card PDF Service</p>
+</div>
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Learning Licence Download</h3>
+<p>उपलब्ध वैध प्रक्रिया के अनुसार</p>
+</div>
+
+<div class="card">
+<div class="icon">🌾</div>
+<h3>All State Farmer Card</h3>
+<p>Farmer Card Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🪪</div>
+<h3>Aadhaar Card Update</h3>
+<p>Aadhaar Update Service</p>
+</div>
+
+<div class="card">
+<div class="icon">💳</div>
+<h3>PAN Card Online Apply</h3>
+<p>Online PAN Application</p>
+</div>
+
+<div class="card">
+<div class="icon">✏️</div>
+<h3>PAN Card Correction</h3>
+<p>PAN Correction Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Aadhaar Udyam Registration</h3>
+<p>Udyam Registration Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>GST Registration</h3>
+<p>GST Registration Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🗳️</div>
+<h3>Voter ID Mobile Link</h3>
+<p>Voter Mobile Linking</p>
+</div>
+
+<div class="card">
+<div class="icon">🗳️</div>
+<h3>Voter ID Download</h3>
+<p>उपलब्ध वैध प्रक्रिया के अनुसार</p>
+</div>
+
+<div class="card">
+<div class="icon">🗳️</div>
+<h3>Voter ID Update</h3>
+<p>Voter ID Update Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🚘</div>
+<h3>PUC Certificate Service</h3>
+<p>Pollution Certificate Service</p>
+</div>
+
+<div class="card">
+<div class="icon">💳</div>
+<h3>PVC Card Home Delivery</h3>
+<p>PVC Card Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h3>LMS Certificate</h3>
+<p>LMS Certificate Service</p>
+</div>
+
+<div class="card">
+<div class="icon">🔎</div>
+<h3>DL Find All India</h3>
+<p>Driving Licence Search Service</p>
+</div>
 
 </div>
 </section>
+
 
 <section>
+
 <div class="contact">
+
 <h2>📞 SONI CYBER CAFE</h2>
-<p>GARAHIYA Road Mela Bazar, Madhuban, East Champaran, Bihar - 845420</p>
-<p>🕗 समय: सुबह 8 बजे से शाम 7 बजे तक</p>
-<p>📱 7070656113</p>
-<a class="btn whatsapp" href="https://wa.me/917070656113">WhatsApp पर संपर्क करें</a>
+
+<p>ONLINE SERVICE</p>
+
+<div class="phone">
+📱 7070656113
 </div>
+
+<a class="btn whatsapp"
+   href="https://wa.me/917070656113"
+   target="_blank">
+   💬 WhatsApp करें
+</a>
+
+</div>
+
 </section>
 
+
 <footer>
-<strong>SONI CYBER CAFE</strong> — ONLINE SERVICE<br>
+
+<strong>SONI CYBER CAFE</strong> — ONLINE SERVICE
+
+<br>
+
 © 2026 All Rights Reserved
+
 </footer>
 
 </body>
